@@ -59,6 +59,7 @@
     umu-launcher
     wine
     git
+    vscodium
     qemu
     virtiofsd
     mate-polkit
