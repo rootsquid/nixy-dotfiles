@@ -5,14 +5,15 @@
     [
       ./hardware-configuration.nix
     ];
+
   boot.kernelPackages = pkgs.linuxPackages_testing;
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "/dev/sda";
   
-  networking.hostName = "nixos";
+  networking.hostName = "nixy";
   networking.networkmanager.enable = true;
   
-  nix.settings.experimental-features = ["nix-command""flakes"];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
    
   time.timeZone = "Africa/Cairo";
 
@@ -109,8 +110,6 @@
     xserver = {
       enable = true;
       windowManager.i3 = {
-        enable = true; };
-      windowManager.oxwm = {
         enable = true; };
      xkb = {
      layout = "us,eg";
